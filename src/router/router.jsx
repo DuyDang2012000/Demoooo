@@ -3,11 +3,11 @@ import AuthLayout from '../pages/auth/Auth'
 import AuthGuard from '../pages/auth/AuthGua'
 import Challenge from '../pages/challenge'
 import Question from '../pages/question'
-import Layout from '../pages/layout'
-import Login from '../pages/login'
 import MyPage from '../pages/record'
-import Home from '../pages/home'
+import Home from '../pages/home/Home'
 import Healthy from '../pages/healthy'
+import Layout from '../pages/layout/Layout'
+import Login from '../pages/login/Login'
 
 const routesConfig = [
   {
