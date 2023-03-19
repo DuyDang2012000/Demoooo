@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-import { Navigate, useRoutes } from "react-router-dom";
-import "./App.css";
+import { useRoutes } from "react-router-dom";
 import routesConfig from "./router/router";
 
 function App() {
