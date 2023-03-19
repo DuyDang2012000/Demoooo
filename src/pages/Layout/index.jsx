@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, Navigate, Outlet } from "react-router-dom";
+import Footer from "../../components/Footer";
+import Nav from "../../components/Nav";
 
 function Layout() {
   const isAuth = true;
@@ -7,17 +9,12 @@ function Layout() {
   if (!isAuth) {
     return <Navigate to="/auth" />;
   }
+
   return (
     <>
-      <ul>
-        <Link to="/" className="nav-link">
-          homep
-        </Link>
-        <Link to="/page" className="nav-link">
-          pagep
-        </Link>
-      </ul>
-      <Outlet />
+      <Nav />
+      <div className="min-h-[calc(100vh-64px-128px)]"><Outlet /></div>
+      <Footer/>
     </>
   );
 }
