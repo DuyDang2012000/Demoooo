@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 
 const api = axios.create({
   baseURL:
-    'https://2bac-2405-4802-1c88-45b0-b8e8-5507-ca75-7c3a.ap.ngrok.io/api',
+    'https://d0ad-2405-4802-1c88-45b0-b8e8-5507-ca75-7c3a.ap.ngrok.io/api',
   timeout: 5000,
   headers: {
     'Content-Type': 'application/json',
