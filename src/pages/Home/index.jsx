@@ -6,7 +6,7 @@ import {
   RecommendWrapper,
   StyledImg,
   Text,
-  Tittle,
+  Title,
   Wrapper,
   WrapperColumn,
   WrapperContent,
@@ -38,26 +38,20 @@ const Home = () => {
   return (
     <Wrapper className="pt-[56px] pb-[64px] w-full max-w-[960px] m-auto">
       {/* filter column */}
-      <RecommendWrapper className="flex items-center gap-8 mb-[56px]">
+      <RecommendWrapper>
         {recommendTitle.map((item, index) => (
-          <WrapperColumn
-            key={index}
-            className="w-full max-w-[216px] h-full max-h-[144px] px-[12px] py-[24px] bg-black600 text-center cursor-pointer"
-            onClick={() => setFilter(item.value)}
-          >
-            <Tittle className="text-yellow300 uppercase mb-[10px] font-normal text-[22px]">
-              Recommended {item.title}
-            </Tittle>
+          <WrapperColumn key={index} onClick={() => setFilter(item.value)}>
+            <Title>Recommended {item.title}</Title>
             <hr className="w-[40%] mx-auto mb-2 text-white" />
             <Text className="text-white">{item.content}</Text>
           </WrapperColumn>
         ))}
       </RecommendWrapper>
       {/* data after filter */}
-      <RecommendContent className="flex items-center gap-2 flex-wrap mb-[26px]">
+      <RecommendContent>
         {recommendData.slice(0, defaultValue).map((item, idx) => (
           <WrapperContent key={idx}>
-            <WrapperContentImage className="w-[234px] h[145px] relative mb-2">
+            <WrapperContentImage>
               <StyledImg
                 src={item.images}
                 alt={item.images}
@@ -70,7 +64,7 @@ const Home = () => {
             <Text className="w-full max-w-[234px] text-[15px] text-textColor mb-2 block">
               {item.content}
             </Text>
-            <WrapperTags className="flex items-center gap-2">
+            <WrapperTags className="">
               {item.tags.map((value) => (
                 <Text className="text-orange400 text-xs" key={value.id}>
                   #{value.title}
@@ -81,16 +75,11 @@ const Home = () => {
         ))}
       </RecommendContent>
       {/* load more button */}
-      <Button
-        className="block mx-auto w-full h-full max-w-[296px] max-h-[56px] rounded p-4 text-center bg-gradient-to-r from-yellow300 to-orange400 text-white"
-        onClick={showMoreItems}
-      >
-        コラムをもっと見る
-      </Button>
+      <Button onClick={showMoreItems}>コラムをもっと見る</Button>
       <StyledImg
         src={ToTop}
         alt=""
-        className="fixed right-[calc(10vw/2)] top-[50%] cursor-pointer"
+        className="fixed right-[calc(8vw/2)] top-[50%] cursor-pointer"
         onClick={() => {
           window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
         }}
