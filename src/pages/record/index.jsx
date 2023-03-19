@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import ToTop from '../../asset/svgs/component_scroll.svg'
+import ToTop from '../../assets/svg/component_scroll.svg'
 
-import Bg from '../../asset/svgs/anh.svg'
+import Bg from '../../assets/svg/anh.svg'
 
 const MyPage = () => {
   const [data, setData] = useState()
@@ -69,10 +69,9 @@ const MyPage = () => {
         </div>
       </div>
       <div className="flex my-[10px] mb-[28px]">
-        <div class="grid grid-cols-4 gap-[8px] w-[100%]">
+        <div className="grid grid-cols-4 gap-[8px] w-[100%]">
           {data?.map((value, index) => (
             <div key={index} className="h-[241.53px] relative cursor-pointer">
-
               <img src={value.image} alt="" className="w-[100%] h-[100%]" />
               <span className="absolute left-0 bottom-0 p-[8px] bg-yellow300">
                 {value?.date}
@@ -90,7 +89,7 @@ const MyPage = () => {
       <img
         src={ToTop}
         alt=""
-        className="fixed right-[calc(25vw/2)] top-[50%] cursor-pointer"
+        className="fixed right-[calc(10vw/2)] top-[50%] cursor-pointer"
         onClick={() => {
           window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
         }}

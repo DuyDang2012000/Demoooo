@@ -1,27 +1,31 @@
-import { Navigate } from "react-router-dom";
-import AuthLayout from "../pages/Auth/Auth";
-import AuthGuard from "../pages/Auth/AuthGua";
-import Home from "../pages/Home";
-import Layout from "../pages/Layout";
-import Login from "../pages/Login";
-import MyPage from "../pages/Mypage";
-import PageOne from "../pages/PageOne";
+import { Navigate } from 'react-router-dom'
+import AuthLayout from '../pages/auth/Auth'
+import AuthGuard from '../pages/auth/AuthGua'
+import PageOne from '../pages/challenge'
+import Layout from '../pages/layout'
+import Login from '../pages/login'
+import MyPage from '../pages/record'
+import Home from '../pages/home'
 
 const routesConfig = [
   {
     element: <Layout />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />,
       },
       {
-        path: "/page",
+        path: '/challenge',
         element: <PageOne />,
       },
       {
-        path: "/myPage",
+        path: '/record',
         element: <MyPage />,
+      },
+      {
+        path: '/question',
+        element: <PageOne />,
       },
     ],
   },
@@ -33,6 +37,6 @@ const routesConfig = [
       { path: 'login', element: <AuthGuard element={<Login />} /> },
     ],
   },
-];
+]
 
-export default routesConfig;
+export default routesConfig

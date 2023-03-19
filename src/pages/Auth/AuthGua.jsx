@@ -1,22 +1,22 @@
-import React, { useEffect } from "react";
-import { Navigate } from "react-router-dom";
+import React, { useEffect } from 'react'
+import { Navigate } from 'react-router-dom'
 
 const AuthGuard = ({ element }) => {
-  const isAuth = true;
+  const isAuth = true
 
   useEffect(() => {
     //   const accessToken = webStorage.getToken(); lấy token
-    const accessToken = false;
+    const accessToken = false
     if (accessToken) {
-      console.log("Lấy thông tin");
+      console.log('Lấy thông tin')
     }
-  }, []);
+  }, [])
 
   if (isAuth) {
-    return <Navigate to="/" />;
+    return <Navigate to="/" />
   }
 
-  return element;
-};
+  return element
+}
 
-export default AuthGuard;
+export default AuthGuard

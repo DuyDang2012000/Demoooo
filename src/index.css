@@ -8,12 +8,12 @@
   --medium: 500;
   --bold: 600;
   --extra-bold: 700;
-  font-family: "Inter", serif;
+  font-family: 'Inter', serif;
 }
 
 body {
   line-height: 1.35 !important;
-  font-family: "Inter", serif;
+  font-family: 'Inter', serif;
 }
 
 * {

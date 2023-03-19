@@ -1,18 +1,18 @@
-let accessToken = null;
-let refreshToken = null;
+let accessToken = null
+let refreshToken = null
 
 export const setAccessToken = (token) => {
-  accessToken = token;
-};
+  accessToken = token
+}
 
 export const getAccessToken = () => {
-  return accessToken;
-};
+  return accessToken
+}
 
 export const setRefreshToken = (token) => {
-  refreshToken = token;
-};
+  refreshToken = token
+}
 
 export const getRefreshToken = () => {
-  return refreshToken;
-};
+  return refreshToken
+}
