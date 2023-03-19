@@ -1,11 +1,11 @@
 import { Navigate } from 'react-router-dom'
-import AuthLayout from '../pages/auth/Auth'
-import AuthGuard from '../pages/auth/AuthGua'
 import PageOne from '../pages/challenge'
-import Layout from '../pages/layout'
-import Login from '../pages/login'
+import Layout from '../pages/Layout/Layout'
 import MyPage from '../pages/record'
-import Home from '../pages/home'
+import Home from '../pages/Home/Home'
+import Auth from '../pages/Auth/Auth'
+import AuthGua from '../pages/Auth/AuthGua'
+import Login from '../pages/Login/Login'
 
 const routesConfig = [
   {
@@ -31,10 +31,10 @@ const routesConfig = [
   },
   {
     path: '/auth',
-    element: <AuthLayout />,
+    element: <Auth />,
     children: [
       { path: '/auth', element: <Navigate to="login" /> },
-      { path: 'login', element: <AuthGuard element={<Login />} /> },
+      { path: 'login', element: <AuthGua element={<Login />} /> },
     ],
   },
 ]
