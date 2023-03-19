@@ -1,39 +1,21 @@
-import { Wrapper } from './styled'
-import imagesRecord1 from '../../assets/images/imagesRecord1.png'
-import imagesRecord2 from '../../assets/images/imagesRecord2.png'
-import imagesRecord3 from '../../assets/images/imagesRecord3.png'
+import ToTop from '../../assets/svg/component_scroll.svg'
 import MyExe from './components/MyExe.jsx'
+import { Wrapper } from './styled'
+import MyRecord from './components/MyRecord'
 
 const Home = () => {
   return (
     <Wrapper>
-      <div className="flex items-center gap-[48px]">
-        <div className="py-[24px] px-[20px] bg-yellow300 w-[288px] h-[288px] relative">
-          <img
-            src={imagesRecord1}
-            alt=""
-            className="w-full h-full object-cover bg-black500"
-          />
-        </div>
-        <span></span>
-        <div className="py-[24px] px-[20px] bg-yellow300 w-[288px] h-[288px] relative">
-          <img
-            src={imagesRecord2}
-            alt=""
-            className="w-full h-full object-cover bg-black500"
-          />
-        </div>
-        <span></span>
-        <div className="py-[24px] px-[20px] bg-yellow300 w-[288px] h-[288px] relative">
-          <img
-            src={imagesRecord3}
-            alt=""
-            className="w-full h-full object-cover bg-black500"
-          />
-          <span></span>
-        </div>
-      </div>
+      <MyRecord />
       <MyExe />
+      <img
+        src={ToTop}
+        alt=""
+        className="fixed right-[calc(8vw/2)] top-[50%] cursor-pointer"
+        onClick={() => {
+          window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+        }}
+      />
     </Wrapper>
   )
 }
