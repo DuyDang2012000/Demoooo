@@ -8,21 +8,21 @@ import Waning from "../asset/svgs/waning.svg";
 
 const Nav = () => {
   return (
-    <div className=" bg-dark-600 ">
+    <div className=" bg-black500 ">
       <ul className="max-w-[960px] m-auto flex gap-[30px] h-[64px] items-center justify-between">
-        <Link to="/" className="nav-link text-light ">
+        <Link to="/" className="nav-link text-white ">
           <img src={Logo} alt="" />
         </Link>
         <div className="flex gap-[30px] h-[64px] items-center">
-          <Link to="/myPage" className="nav-link text-light flex gap-[12px]">
+          <Link to="/myPage" className="nav-link text-white flex gap-[12px]">
             <img src={Edit} alt="" />
             自分の記録
           </Link>
-          <Link to="/page" className="nav-link text-light flex gap-[12px]">
+          <Link to="/page" className="nav-link text-white flex gap-[12px]">
             <img src={Aw} alt="" />
             チャレンジ
           </Link>
-          <Link to="/page" className="nav-link text-light flex gap-[12px]">
+          <Link to="/page" className="nav-link text-white flex gap-[12px]">
             <img src={Waning} alt="" />
             お知らせ
           </Link>
