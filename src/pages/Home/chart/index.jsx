@@ -135,7 +135,7 @@ const LineChart = () => {
 
   return (
     <WrapperChart className="relative">
-      <WrapperHeader>
+      <WrapperHeader className="absolute top-4 left-10 z-20 flex items-center gap-8">
         <span className="uppercase text-[15px] text-yellow300">
           Body record
         </span>
