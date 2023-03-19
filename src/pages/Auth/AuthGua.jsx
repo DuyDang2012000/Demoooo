@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 
-const AuthGuard = ({ element }) => {
+const AuthGua = ({ element }) => {
   const isAuth = true
 
   useEffect(() => {
@@ -19,4 +19,4 @@ const AuthGuard = ({ element }) => {
   return element
 }
 
-export default AuthGuard
+export default AuthGua
