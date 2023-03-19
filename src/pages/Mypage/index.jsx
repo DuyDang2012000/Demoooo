@@ -72,6 +72,7 @@ const MyPage = () => {
         <div class="grid grid-cols-4 gap-[8px] w-[100%]">
           {data?.map((value, index) => (
             <div key={index} className="h-[241.53px] relative cursor-pointer">
+
               <img src={value.image} alt="" className="w-[100%] h-[100%]" />
               <span className="absolute left-0 bottom-0 p-[8px] bg-yellow300">
                 {value?.date}
