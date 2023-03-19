@@ -13,6 +13,7 @@ import {
   WrapperContentImage,
   WrapperTags,
 } from './styled'
+import ToTop from '../../assets/svg/component_scroll.svg'
 
 const Home = () => {
   const [filter, setFilter] = useState('column')
@@ -35,9 +36,9 @@ const Home = () => {
   }, [filter])
 
   return (
-    <Wrapper className="pt-[56px] pb-[64px]">
+    <Wrapper className="pt-[56px] pb-[64px] w-full max-w-[960px] m-auto">
       {/* filter column */}
-      <RecommendWrapper className="flex items-center gap-8 justify-center mb-[56px]">
+      <RecommendWrapper className="flex items-center gap-8 mb-[56px]">
         {recommendTitle.map((item, index) => (
           <WrapperColumn
             key={index}
@@ -53,7 +54,7 @@ const Home = () => {
         ))}
       </RecommendWrapper>
       {/* data after filter */}
-      <RecommendContent className="flex items-center justify-center gap-2 flex-wrap mb-[26px]">
+      <RecommendContent className="flex items-center gap-2 flex-wrap mb-[26px]">
         {recommendData.slice(0, defaultValue).map((item, idx) => (
           <WrapperContent key={idx}>
             <WrapperContentImage className="w-[234px] h[145px] relative mb-2">
@@ -86,6 +87,14 @@ const Home = () => {
       >
         コラムをもっと見る
       </Button>
+      <StyledImg
+        src={ToTop}
+        alt=""
+        className="fixed right-[calc(10vw/2)] top-[50%] cursor-pointer"
+        onClick={() => {
+          window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+        }}
+      />
     </Wrapper>
   )
 }
