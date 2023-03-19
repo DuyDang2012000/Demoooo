@@ -2,6 +2,7 @@ import { Wrapper } from './styled'
 import imagesRecord1 from '../../assets/images/imagesRecord1.png'
 import imagesRecord2 from '../../assets/images/imagesRecord2.png'
 import imagesRecord3 from '../../assets/images/imagesRecord3.png'
+import MyExe from './components/MyExe.jsx'
 
 const Home = () => {
   return (
@@ -32,6 +33,7 @@ const Home = () => {
           <span></span>
         </div>
       </div>
+      <MyExe />
     </Wrapper>
   )
 }
