@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link, Navigate, Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
 import Footer from '../../components/Footer'
 import Nav from '../../components/Nav'
 
-function Layout() {
-  const isAuth = true
+const Layout = () => {
+  const isAuth = localStorage.getItem('token') ? true : false
 
   if (!isAuth) {
     return <Navigate to="/auth" />

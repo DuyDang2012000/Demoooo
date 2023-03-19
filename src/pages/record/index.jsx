@@ -113,7 +113,7 @@ const MyPage = () => {
         </div>
       </div>
       <div
-        className="h-[56px] w-[296px] m-auto flex items-center justify-center bg-gradient-to-t from-yellow300 to-orange400  cursor-pointer rounded-lg text-white"
+        className="h-[56px] w-[296px] m-auto flex items-center justify-center bg-gradient-to-t from-yellow300 to-orange400  cursor-pointer rounded text-white"
         onClick={loadMore}
       >
         記録をもっと見る

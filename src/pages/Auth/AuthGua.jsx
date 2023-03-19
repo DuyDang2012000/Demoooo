@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 
-const AuthGua = ({ element }) => {
-  const isAuth = true
+const AuthGuard = ({ element }) => {
+  const isAuth = localStorage.getItem('token') ? true : false
 
   useEffect(() => {
     //   const accessToken = webStorage.getToken(); lấy token
@@ -19,4 +19,4 @@ const AuthGua = ({ element }) => {
   return element
 }
 
-export default AuthGua
+export default AuthGuard

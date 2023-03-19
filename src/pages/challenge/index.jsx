@@ -1,9 +1,7 @@
 import React from 'react'
 
-function PageOne() {
-  return (
-    <h2>PageOne</h2>
-  )
+function Challenge() {
+  return <h2>Challenge</h2>
 }
 
-export default PageOne
+export default Challenge
