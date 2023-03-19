@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 
 const AuthLayout = () => {

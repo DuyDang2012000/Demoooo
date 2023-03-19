@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 
 const AuthGuard = ({ element }) => {
-  const isAuth = true
+  const isAuth = localStorage.getItem('token') ? true : false
 
   useEffect(() => {
     //   const accessToken = webStorage.getToken(); lấy token

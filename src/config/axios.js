@@ -2,7 +2,13 @@ import axios from 'axios'
 import Cookies from 'js-cookie'
 
 const api = axios.create({
-  baseURL: 'https://your-api-url.com',
+  baseURL:
+    'https://2bac-2405-4802-1c88-45b0-b8e8-5507-ca75-7c3a.ap.ngrok.io/api',
+  timeout: 5000,
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: 'Bearer ' + localStorage.getItem('token'),
+  },
 })
 
 // api.interceptors.request.use((config) => {

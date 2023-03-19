@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import Nav from '../../components/Nav'
 
 function Layout() {
-  const isAuth = true
+  const isAuth = localStorage.getItem('token') ? true : false
 
   if (!isAuth) {
     return <Navigate to="/auth" />

@@ -1,11 +1,13 @@
 import { Navigate } from 'react-router-dom'
 import AuthLayout from '../pages/auth/Auth'
 import AuthGuard from '../pages/auth/AuthGua'
-import PageOne from '../pages/challenge'
+import Challenge from '../pages/challenge'
+import Question from '../pages/question'
 import Layout from '../pages/layout'
 import Login from '../pages/login'
 import MyPage from '../pages/record'
 import Home from '../pages/home'
+import Healthy from '../pages/healthy'
 
 const routesConfig = [
   {
@@ -13,19 +15,23 @@ const routesConfig = [
     children: [
       {
         path: '/',
-        element: <Home />,
-      },
-      {
-        path: '/challenge',
-        element: <PageOne />,
-      },
-      {
-        path: '/record',
         element: <MyPage />,
       },
       {
+        path: '/challenge',
+        element: <Challenge />,
+      },
+      {
+        path: '/record',
+        element: <Home />,
+      },
+      {
         path: '/question',
-        element: <PageOne />,
+        element: <Question />,
+      },
+      {
+        path: '/healthy',
+        element: <Healthy />,
       },
     ],
   },
